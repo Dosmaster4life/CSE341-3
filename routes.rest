@@ -49,16 +49,49 @@ GET http://localhost:10000/contacts/63265c7f07ec9687f1155198
 
 // render
 
-GET https://contactsite-nfh3.onrender.com/contacts
 
-GET https://contactsite-nfh3.onrender.com/contacts/6326567a07ec9687f1155195
+### Create contact
+POST https://contactsite-nfh3.onrender.com/contacts HTTP/1.1
+Content-Type: application/json
 
-GET https://contactsite-nfh3.onrender.com/contacts/632656a007ec9687f1155196
+{
+    "firstName":"Jaden",
+    "lastName":"Jensen",
+    "email":"Jensen@fakemail.com",
+    "favoriteColor":"Blue",
+    "birthday":"05/18/1999"
+}
+
+### Edit Contact
+PUT https://contactsite-nfh3.onrender.com/contacts/632a2549756969813f00ccb0 HTTP/1.1 
+content-type: application/json
+
+{
+    "firstName":"Jaden",
+    "lastName":"Jensen",
+    "email":"Jensen2@fakemail.com",
+    "favoriteColor":"Red",
+    "birthday":"05/18/1999"
+
+}
+### Delete Contact
+DELETE https://contactsite-nfh3.onrender.com/contacts/632a2549756969813f00ccb0 HTTP/1.1
+
+### Get contacts
+GEThttps://contactsite-nfh3.onrender.com/contacts
+
+### Get contact by id
+
+GET https://contactsite-nfh3.onrender.com/6326567a07ec9687f1155195
+
+### Get contact by id
+
+GET https://contactsite-nfh3.onrender.com/632656a007ec9687f1155196
+
+### Get contact by id
 
 GET https://contactsite-nfh3.onrender.com/contacts/632656af07ec9687f1155197
 
+### Get contact by id
+
 GET https://contactsite-nfh3.onrender.com/contacts/63265c7f07ec9687f1155198
-
-
-
-
