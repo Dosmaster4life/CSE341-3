@@ -1,5 +1,12 @@
 
 // localhost
+POST http://localhost:10000/contacts HTTP/1.1 content-type: application/json
+
+{
+    "firstName":"Jaden", "lastName":"Jensen", "email":"Jensen@fakemail.com", "favoriteColor":"Blue", "birthday":"05/18/1999"
+
+}
+
 GET http://localhost:10000/contacts
 
 GET http://localhost:10000/contacts/6326567a07ec9687f1155195
