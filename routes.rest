@@ -78,7 +78,7 @@ content-type: application/json
 DELETE https://contactsite-nfh3.onrender.com/contacts/632a2549756969813f00ccb0 HTTP/1.1
 
 ### Get contacts
-GEThttps://contactsite-nfh3.onrender.com/contacts
+GET https://contactsite-nfh3.onrender.com/contacts
 
 ### Get contact by id
 
