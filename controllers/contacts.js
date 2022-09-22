@@ -31,7 +31,11 @@ const createContact = async (req, res) => {
     birthday: req.body.birthday
   };
   const response = await mongodb.getDatabase().db().collection('contacts').insertOne(contact);
-  response.acknowledged ? res.status(201).json(response): res.status(500).json(response.error || 'Error occurred while creating the contact.');
+  if (response.acknowledged) {
+    res.status(201).json(response);
+  } else {
+    res.status(500).json(response.error || 'Error occured while creating contact.');
+  }
   
 };
 
