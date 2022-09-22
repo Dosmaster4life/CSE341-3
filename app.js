@@ -9,7 +9,7 @@ require("dotenv").config();
 app.use(bodyParser.json()).use((req,res,next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
-}).use('/',require('./routes/index'));
+}).use('/',require('./routes'));
 
 app.get('/favico.ico', (req, res) => { // removes the error for favicon.ico missing in some browsers.
     res.sendStatus(404); // We don't need to send anything back.
