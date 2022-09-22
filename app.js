@@ -11,9 +11,7 @@ app.use(bodyParser.json()).use((req,res,next) => {
     next();
 }).use('/',require('./routes'));
 
-app.get('/favico.ico', (req, res) => { // removes the error for favicon.ico missing in some browsers.
-    res.sendStatus(404); // We don't need to send anything back.
-});
+
 
 mongodb.initDatabase((error,mongodb) => {
     if(error) {
